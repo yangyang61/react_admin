@@ -1,8 +1,8 @@
 const CracoLessPlugin = require('craco-less');
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); // 在项目运行之后会弹出一个页面显示编译文件详情
 const CompressionWebpackPlugin = require("compression-webpack-plugin"); // gzip打包压缩插件
-
-
+const path = require("path");
+const resolve = dir => path.join(__dirname, '.', dir)
 module.exports = {
     webpack: {
         plugins: [
@@ -18,7 +18,10 @@ module.exports = {
                 threshold: 1024,
                 minRatio: 0.8
             }),
-        ]
+        ],
+        alias: {
+            '@src': resolve('src')
+        }
     },
     plugins: [
         {
@@ -33,17 +36,17 @@ module.exports = {
             },
         },
     ],
-    devServer: {
-        proxy: {
-            "/api": {
-                target: "http://xxx.xx.xxx.xx:xxxx",//后台服务地址
-                changeOrigin: true,
-                pathRewrite: {
-                    "^/api": ""
-                }
-            }
-        }
-    },
+    // devServer: {
+    //     proxy: {
+    //         // "/api": {
+    //         //     target: "http://xxx.xx.xxx.xx:xxxx",//后台服务地址
+    //         //     changeOrigin: true,
+    //         //     pathRewrite: {
+    //         //         "^/api": ""
+    //         //     }
+    //         // }
+    //     }
+    // },
     babel: {
         plugins: [
             [

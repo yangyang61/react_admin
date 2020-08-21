@@ -5,14 +5,12 @@ import Index from './pages/Index'
 import Login from './pages/Login/login'
 function App() {
     return (
-        <div>
-            <Router>
-                <Switch>
-                    <Route exact path="/" component={Index} />
-                    <Route exact path="/login" component={Login} />
-                </Switch>
-            </Router>
-        </div>
+        <Router>
+            <Switch>
+                <Route path="/login" component={Login} />
+                <Route path="/" component={Index} />
+            </Switch>
+        </Router>
     )
 }
 

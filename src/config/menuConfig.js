@@ -6,14 +6,18 @@ const menuList = [
     },
     {
         title: '商品',
-        path: '/category',
+        path: '/product',
         icon: 'HomeOutlined',
-        // children: [
-        //     {
-        //         title: '品类管理',
-        //         path: ''
-        //     }
-        // ]
+        children: [
+            {
+                title: '品类管理',
+                path: '/category'
+            },
+            {
+                title: '商品管理',
+                path: '/product'
+            }
+        ]
     },
     {
         title: '用户',

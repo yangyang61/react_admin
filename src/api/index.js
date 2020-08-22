@@ -10,6 +10,15 @@ export const reqLogin = (data) => ajax(BASE + '/login', data, 'POST')
 // 添加用户
 export const reqAddUser = (data) => ajax(BASE + '/mamge/user/add', data, 'POST')
 
+// 获取一级/二级分类列表
+export const reqCategories = (parentId) => ajax(BASE + '/manage/category/list', { parentId })
+
+// 添加分类
+export const reqAddCategory = (data) => ajax(BASE + '/manage/category/add', data, 'POST')
+
+// 修改分类
+export const reqUpdateCategory = (data) => ajax(BASE + '/manage/category/update', data, 'POST')
+
 // jsonp请求的接口请求函数
 // export const reqWeather = (city) => {
 //     return new Promise((resolve, reject) => {

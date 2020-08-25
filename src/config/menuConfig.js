@@ -6,7 +6,7 @@ const menuList = [
     },
     {
         title: '商品',
-        path: '/product',
+        path: '/products',
         icon: 'HomeOutlined',
         children: [
             {
@@ -20,8 +20,13 @@ const menuList = [
         ]
     },
     {
-        title: '用户',
+        title: '用户管理',
         path: '/user',
+        icon: 'SafetyCertificateOutlined'
+    },
+    {
+        title: '角色管理',
+        path: '/role',
         icon: 'SafetyCertificateOutlined'
     },
     {

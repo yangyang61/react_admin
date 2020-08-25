@@ -25,6 +25,17 @@ export const reqProducts = (pageNum, pageSize) => ajax(BASE + '/manage/product/l
 // 搜索商品分页列表
 export const reqSearchProducts = (searchName, pageNum, pageSize, searchType) => ajax(BASE + '/manage/product/search', { [searchType]: searchName, pageNum, pageSize })
 
+// 获取所有角色列表
+export const reqRoles = () => ajax(BASE + '/manage/role/list')
+
+// 添加角色
+export const reqAddRoles = (data) => ajax(BASE + '/manage/role/add', data, "POST")
+
+// 设置角色权限
+export const reqUpdateRoles = (data) => ajax(BASE + '/manage/role/add', data, "POST")
+
+
+
 // jsonp请求的接口请求函数
 // export const reqWeather = (city) => {
 //     return new Promise((resolve, reject) => {

@@ -19,6 +19,12 @@ export const reqAddCategory = (data) => ajax(BASE + '/manage/category/add', data
 // 修改分类
 export const reqUpdateCategory = (data) => ajax(BASE + '/manage/category/update', data, 'POST')
 
+// 获取商品分页列表
+export const reqProducts = (pageNum, pageSize) => ajax(BASE + '/manage/product/list', { pageNum, pageSize })
+
+// 搜索商品分页列表
+export const reqSearchProducts = (searchName, pageNum, pageSize, searchType) => ajax(BASE + '/manage/product/search', { [searchType]: searchName, pageNum, pageSize })
+
 // jsonp请求的接口请求函数
 // export const reqWeather = (city) => {
 //     return new Promise((resolve, reject) => {

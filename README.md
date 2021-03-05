@@ -1,4 +1,4 @@
-# 一个不完整的垃圾的后台管理系统
+# React后台管理系统
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
